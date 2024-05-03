@@ -13,7 +13,7 @@ DEPS = $(OBJS:.o=.d)
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -MMD -c -o $@ $<
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 -include $(DEPS)
 
 clean:

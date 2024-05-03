@@ -27,6 +27,24 @@
 производить сортировку.
 
 ## Как запустить? 
-Устанавливаем средство сборки g++ (например,для убунту):
-sudo apt-get install g++ &&mkdir repo &&cd repo&&git clone https://github.com/Ruzil-Jan/yadro.git &&make
+### 1) Устанавливаем средство сборки g++ (например,для убунту):
+`sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade`
+### 2) Создаем репозиторий (Можно ваш)
+`mkdir repo`
+### 3) Переходим 
+`cd repo`
+### 4) Клонируем 
+`git clone https://github.com/Ruzil-Jan/yadro.git`
+### 5) Устанавливаем через Makefile
+`make` 
+### 6) Запускаем суррогатный магнитофон 
+`./smt` <input> <output>
+## Или же ,если лень...
+### 1) Запускаем готовый скрипт 
+`sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir repo&&cd repo&&git clone https://github.com/Ruzil-Jan/yadro.git&&make` 
+### 2) Запускаем суррогатный магнитофон
+`./smt`
+
+
+
 
