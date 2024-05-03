@@ -5,13 +5,13 @@
 #include "tape.h"
 #include <string>
 
-class ExternalSorter {
+class Sorter {
 private:
     const int MAX_MEMORY;     // Максимальный объем памяти для работы
     const std::string tmpDir; // Директория для временных файлов
 
 public:
-    ExternalSorter(int maxMemory, const std::string& tmpDirectory);
+    Sorter(int maxMemory, const std::string& tmpDirectory);
 
     void sort(Tape& inputTape, Tape& outputTape);
 };
