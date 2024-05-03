@@ -5,6 +5,7 @@ CXXFLAGS = -Wall -Wextra -std=c++11
 # суррогоатный mt
 TARGET = smt
 # исходники
+
 SRCS = main.cpp filetape.cpp sorter.cpp
 OBJS = $(SRCS:.cpp=.o)
 $(TARGET): $(OBJS)
@@ -17,4 +18,4 @@ clean:
 clear:
 	rm -rf $(OBJS)
 	
-.PHONY: all clean clear
+.PHONY:clean clear
