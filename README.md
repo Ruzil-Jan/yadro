@@ -36,14 +36,14 @@
 ### 4) Клонируем 
 `git clone https://github.com/Ruzil-Jan/yadro.git`
 ### 5) Переходим в repo/yadro
-`cd repo/yadro` 
+`cd yadro` 
 ### 6) Устанавливаем через Makefile
 `make` 
 ### 7) Запускаем 
 `./smt` 
 ## Или же ,если лень...
 ### 1) Запускаем готовый скрипт 
-`sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir repo&&cd repo&&git clone https://github.com/Ruzil-Jan/yadro.git&&cd repo/yadro&&make&&echo "Congratulations! You are beautiful!" ` 
+`sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir repo&&cd repo&&git clone https://github.com/Ruzil-Jan/yadro.git&&cd yadro&&make&&echo "Congratulations! You are beautiful!" ` 
 ### 2) Запускаем суррогатный магнитофон)))
 `./smt`
 
