@@ -6,18 +6,18 @@ FileTape::FileTape(const std::string& inputFilename, const std::string& outputFi
 FileTape::~FileTape() {
     input.close();
     output.close();
-}
+}//
 
 bool FileTape::read(int& value) {
     if (input >> value) {
         return true;
     }
     return false;
-}
+}//
 
 void FileTape::write(int value) {
     output << value << std::endl;
-}
+}//
 
 void FileTape::Forward() {}
 
@@ -25,7 +25,7 @@ void FileTape::Forward() {}
 
 bool FileTape::isEnd() const {
     return input.eof();
-}
+}//
 
 void FileTape::rewind() {
     input.clear();
