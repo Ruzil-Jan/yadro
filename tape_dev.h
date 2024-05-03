@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TAPE_DEV_H
+#define TAPE_DEV_H
 // устройство лента
 // чисто виртуальный класс
 #include <vector>
@@ -22,5 +23,6 @@ public:
     // Сдвиг ленты на одну позицию вперед
     virtual void moveForward() = 0;
 };
+#endif
 
 
