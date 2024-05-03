@@ -1,10 +1,28 @@
 #include <iostream>
 #include "filetape.h"
 #include "sorter.h"
+ 
 
-int main(int argc, char* argv[]) {
+void helper()
+{
+    std::cout<<"It's a surrogate mt"<<std::endl;
+    std::cout<<"You can use it however you like "<<std::endl;
+    std::cout<<"-h ,--help "<<std::endl;
+    std::cout<<"Use smt <input file> <output file>"<<std::endl;
+}
+
+int main(int argc, char** argv) {
+
+    if (argc>1)
+    {
+        std::string msg =argv[1];
+        if(msg=="-h"||msg=="--help"){
+            helper();
+            return 0;
+        }
+    }
     if (argc < 3) {
-        std::cerr << "Usee: " << argv[0] << " <arg1:input file> <arg2:output_file>\n\a";
+        std::cerr << "Usee: " << argv[0] << " < call --help or -h for assistance. >\n\a";
         return 1;
     }
     std::string inputFilename = argv[1];
@@ -21,3 +39,5 @@ int main(int argc, char* argv[]) {
     std::cout << "Sorting completed. Output written to :" << outputFilename << std::endl;
     return 0;
 }
+
+

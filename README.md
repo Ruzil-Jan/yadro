@@ -63,7 +63,7 @@ sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir
 
 ## Как оно работает ?
 Запускаем с параметрами  ./smt аргумент1 аргумент2 ,где аргумент1 файл1 ,а аргумент файл2 
-## Будет ли help?
-Да ,будет,но потом 
+## Есть ли help?
+--Да,help есть
 
 
