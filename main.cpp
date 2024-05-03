@@ -7,7 +7,7 @@ void helper()
 {
     std::cout<<"It's a surrogate mt"<<std::endl;
     std::cout<<"You can use it however you like "<<std::endl;
-    std::cout<<"-h ,--help "<<std::endl;
+    std::cout<<"-h ,--help ,help "<<std::endl;
     std::cout<<"Use smt <input file> <output file>"<<std::endl;
 }
 
@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     if (argc>1)
     {
         std::string msg =argv[1];
-        if(msg=="-h"||msg=="--help"){
+        if(msg=="-h"||msg=="--help"||msg=="help"){
             helper();
             return 0;
         }
