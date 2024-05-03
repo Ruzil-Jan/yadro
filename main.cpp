@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     FileTapeDevice inputTape(inputFileName, outputFileName);
     FileTapeDevice outputTape(outputFileName, outputFileName);
 
-    TapeSorter tapeSorter(&inputTape, &outputTape);
+    TapeSorter tapeSorter(inputTape, outputTape);
     tapeSorter.sort();
 
     std::cout << "Sorting completed. Output written to " << outputFileName << std::endl;

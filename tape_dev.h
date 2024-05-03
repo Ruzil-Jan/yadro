@@ -1,7 +1,6 @@
 #ifndef TAPE_DEV_H
 #define TAPE_DEV_H
 // устройство лента
-// чисто виртуальный класс
 #include <vector>
 #include <string>
 
