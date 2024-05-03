@@ -9,7 +9,7 @@ O= -o
 RM= rm
 
 #first target
-$(TARGET) :  main.o sorter.o file_tape_dev.o
+$(TARGET):  main.o sorter.o file_tape_dev.o
 	$(CXX) main.o sorter.o file_tape_dev.o $(O) $(TARGET) $(CXXFLAGS) 
 
 #for main 
@@ -25,5 +25,5 @@ file_tape_dev.o: file_tape_dev.cpp
 	$(CXX) -c file_tape_dev.cpp  $(O) file_tape_dev.o  
 
 #for clean 
-clean :
+clean:
 	$(RM) $(TARGET) *.o 
