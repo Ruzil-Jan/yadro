@@ -28,24 +28,36 @@
 
 ## Как запустить? 
 ### 1) Устанавливаем средство сборки g++ (например,для убунту):
-```bash
+```console
 sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade
 ```
 ### 2) Создаем репозиторий (Можно ваш)
-`mkdir repo`
+```console
+mkdir repo
+```
 ### 3) Переходим 
-`cd repo`
+```console
+cd repo
+```
 ### 4) Клонируем 
-`git clone https://github.com/Ruzil-Jan/yadro.git`
+```console
+git clone https://github.com/Ruzil-Jan/yadro.git
+```
 ### 5) Переходим в repo/yadro
-`cd yadro` 
+```console
+cd yadro
+```
 ### 6) Устанавливаем через Makefile
-`make` 
+```console
+make
+```
 ### 7) Запускаем 
 `./smt` 
 ## Или же ,если лень...
 ### 1) Запускаем готовый скрипт 
-`sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir repo&&cd repo&&git clone https://github.com/Ruzil-Jan/yadro.git&&cd yadro&&make&&echo "Congratulations! You are beautiful!" ` 
+```console
+sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir repo&&cd repo&&git clone https://github.com/Ruzil-Jan/yadro.git&&cd yadro&&make&&echo "Congratulations! You are beautiful!" 
+```
 ### 2) Запускаем суррогатный магнитофон)))
 `./smt`
 
