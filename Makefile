@@ -1,22 +1,21 @@
-#beggining of programm 
-TARGET=surmt
-CXX=g++
-SOURCES=main.cpp filetape.cpp sorter.cpp 
-OBJECTS=$(SOURCES:.cpp= .o)
-#PREFIX=/usr/local/bin
-CXXFLAGS= -g -Wall -std=c++11 -Wextra 
-# compiler flags:
-#  -g     - this flag adds debugging information to the executable file
-#  -Wall  - this flag is used to turn on most compiler warnings
+# компилятор
+CXX = g++
+# флаги
+CXXFLAGS = -Wall -Wextra -std=c++11
 
-$(TARGET): $(OBJECTS)
+# суррогоатный mt
+TARGET = smt
+
+# исходники
+SRCS = main.cpp filetape.cpp sorter.cpp
+OBJS = $(SRCS:.cpp=.o)
+DEPS = $(OBJS:.o=.d)
+$(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
-
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
-	
-all: $(TARGET)
-clean:
-	rm -f $(OBJS) $(TARGET)
+	$(CXX) $(CXXFLAGS) -MMD -c -o $@ $<
+-include $(DEPS)
 
-.PHONY: all clean #директива
+clean:
+	rm -f $(OBJS) $(DEPS) $(TARGET)
+.PHONY: all clean
