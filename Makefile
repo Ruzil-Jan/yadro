@@ -12,21 +12,20 @@ NAMES = &(patsubmit %.cpp,  %.o, $(SOURCE))
 
 #first target
 $(TARGET) :  main.o sorter.o file_tape_dev.o
-$(CC) main.o sorter.o file_tape_dev.o $(O) $(TARGET) $(FLAGS) 
+	$(CC) main.o sorter.o file_tape_dev.o $(O) $(TARGET) $(FLAGS) 
 
 #for main 
 main.o : main.cpp 
-$(CC) -c main.cpp $(O) main.o $(FLAGS) 
+	$(CC) -c main.cpp $(O) main.o $(FLAGS) 
 
 #sorter
 sorter.o : sorter.cpp 
-$(CC) -c sorter.cpp $(O) sorter.o $(FLAGS) 
+	$(CC) -c sorter.cpp $(O) sorter.o $(FLAGS) 
 
 #ftd
 file_tape_dev.o : file_tape_dev.cpp 
-$(CC) -c file_tape_dev.cpp  $(O) file_tape_dev.o $(FLAGS) 
+	$(CC) -c file_tape_dev.cpp  $(O) file_tape_dev.o $(FLAGS) 
 
 #for clean 
 clean :
-$(RM) $(TARGET) *.o 
-
+	$(RM) $(TARGET) *.o 
