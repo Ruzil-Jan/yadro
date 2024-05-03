@@ -1,17 +1,20 @@
 // tape_sorter.h
 #ifndef SORTER_H
 #define SORTER_H
-#include "tape_dev.h"
 
-class TapeSorter {
+#include "tape.h"
+#include <string>
+
+class ExternalSorter {
 private:
-    TapeDevice* inputTape;
-    TapeDevice* outputTape;
+    const int MAX_MEMORY;     // Максимальный объем памяти для работы
+    const std::string tmpDir; // Директория для временных файлов
 
 public:
-    TapeSorter(TapeDevice& inputTape, TapeDevice& outputTape);
-    ~TapeSorter();
+    ExternalSorter(int maxMemory, const std::string& tmpDirectory);
 
-    void sort();
+    void sort(Tape& inputTape, Tape& outputTape);
 };
-#endif
+
+#endif // SORTER_H
+

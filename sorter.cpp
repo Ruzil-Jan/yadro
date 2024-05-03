@@ -1,24 +1,36 @@
-// tape_sorter
 #include "sorter.h"
-#include <vector>
 #include <algorithm>
-TapeSorter::~TapeSorter() {}
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <queue>
+#include <sstream>
+#include <iomanip>
 
-void TapeSorter::sort() {
-    std::vector<int> buffer;
+ExternalSorter::ExternalSorter(int maxMemory, const std::string& tmpDirectory)
+    : MAX_MEMORY(maxMemory), tmpDir(tmpDirectory) {}
 
-    // Чтение данных с входной ленты и сохранение во временный буфер
-    inputTape->rewind();
+void ExternalSorter::sort(Tape& inputTape, Tape& outputTape) {
+    std::vector<int> values;
     int value;
-    while ((value = inputTape->read()) != EOF) {
-        buffer.push_back(value);
+
+    // Чтение значений с входной ленты и сохранение в памяти, учитывая ограничение по памяти
+    while (inputTape.read(value)) {
+        values.push_back(value);
+        if (values.size() * sizeof(int) > static_cast<std::vector<int>::size_type>(MAX_MEMORY)) {
+            std::sort(values.begin(), values.end());
+            for (int val : values) {
+                outputTape.write(val);
+            }
+            values.clear();
+        }
     }
 
-    // Сортировка буфера
-    std::sort(buffer.begin(), buffer.end());
-
-    // Запись отсортированных данных на выходную ленту
-    for (int val : buffer) {
-        outputTape->write(val);
+    // Если остались значения в буфере, сортируем и записываем на выходную ленту
+    if (!values.empty()) {
+        std::sort(values.begin(), values.end());
+        for (int val : values) {
+            outputTape.write(val);
+        }
     }
 }
