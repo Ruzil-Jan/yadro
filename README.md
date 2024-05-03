@@ -66,4 +66,8 @@ sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade&&mkdir
 ## Есть ли help?
 --Да,help есть
 
+## Будет ли скрипт для юнит-теста? 
+
+--Да,чуть попозже.Занят
+
 
