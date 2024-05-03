@@ -27,7 +27,7 @@
 производить сортировку.
 
 ## Как запустить? 
-### 1) Устанавливаем средство сборки g++ (например,для убунту):
+### 1) Устанавливаем средство сборки g++ и make (debian):
 ```console
 sudo apt-get install g++&&sudo apt-get install make&&sudo apt-get upgrade
 ```
